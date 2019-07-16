@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="tnU-bN-yZJ">
             <objects>
-                <viewController id="yR2-ej-QYb" sceneMemberID="viewController">
+                <viewController id="yR2-ej-QYb" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r3L-Gd-Itn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,9 @@
                                 <state key="normal" title="Camera">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="yR2-ej-QYb" eventType="touchUpInside" id="99E-OX-ned"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTa-FR-f8w">
                                 <rect key="frame" x="226" y="593" width="133" height="30"/>
@@ -79,6 +82,9 @@
                                 <state key="normal" title="Photo Library">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="yR2-ej-QYb" eventType="touchUpInside" id="g2t-Tq-WCT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3t-RM-fh0">
                                 <rect key="frame" x="164" y="398" width="46" height="30"/>
@@ -86,12 +92,19 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveTapped:" destination="yR2-ej-QYb" eventType="touchUpInside" id="yM0-3P-ABg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92549020049999997" green="0.94509804249999996" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <viewLayoutGuide key="safeArea" id="4fm-AZ-qho"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="mNa-GH-DcJ"/>
+                    <connections>
+                        <outlet property="caption" destination="SYL-sL-9r0" id="Aq3-Ea-fpW"/>
+                        <outlet property="imageView" destination="v3K-gE-wKf" id="dw1-bT-ZRp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apO-HN-Fkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
